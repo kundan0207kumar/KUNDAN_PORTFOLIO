@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kundan Kumar | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="logo">Kundan</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero">
+    <h1>Hello, I'm <span>Kundan Kumar</span></h1>
+    <h2 class="typing"></h2>
+    <p>MCA Student | Full Stack Web Developer</p>
+    <button onclick="scrollToSection('contact')">Hire Me</button>
+</section>
+
+<!-- About -->
+<!-- About -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am an <b>MCA student</b> at Parul Institute of Engineering and Technology, Vadodara. 
+        I completed my <b>BCA</b> from T.P.S College under Patliputra University. 
+        I am a <b>full-stack web development enthusiast</b> with strong fundamentals in HTML, CSS, JavaScript, React.js, 
+        and backend technologies like Node.js, Express.js, and MongoDB.
+    </p><br>
+    <p>
+        I have developed projects such as an <b>Online Movie Ticket Booking System</b> with authentication and secure payment features, 
+        a responsive <b>Startup Landing Page</b>, and a <b>Personal Portfolio website</b>. 
+        Along with technical skills, I possess strong problem-solving ability, logical reasoning, and aptitude skills. 
+        I have also earned certifications in JavaScript, Python, and Java training from IIT Bombay. 
+        My goal is to continuously grow as a software developer and contribute to real-world applications.
+    </p>
+</section>
+
+
+
+<!-- Skills -->
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid" id="skillsGrid">
+        <span>HTML <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+        <span>CSS <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+        <span>JavaScript <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+        <span>React.js <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+        <span>Node.js <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+        <span>Express.js <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+        <span>MongoDB <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+        <span>Java <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+        <span>C++ <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+        <span>SQL <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+        <span>DSA <button class="remove-btn" onclick="removeSkill(this)">❌</button></span>
+    </div>
+
+    <!-- Add Skill -->
+    <div class="add-skill">
+        <input type="text" id="newSkill" placeholder="Add new skill">
+        <button onclick="addSkill()">Add Skill</button>
+    </div>
+</section>
+
+
+<!-- Projects -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+        <h3>Online Movie Ticket Booking System</h3>
+        <p>
+            Full-stack website with login, signup, movie browsing,
+            booking system and secure payment.
+        </p>
+        <p><b>Tech:</b> React, Node.js, Express, MongoDB</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Startup Landing Page</h3>
+        <p>
+            Responsive and modern landing page with CTA sections.
+        </p>
+        <p><b>Tech:</b> React.js</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Personal Portfolio</h3>
+        <p>
+            Clean and responsive portfolio website showcasing skills and projects.
+        </p>
+        <p><b>Tech:</b> HTML, CSS, JavaScript</p>
+    </div>
+
+     <div class="add-project">
+        <input type="text" id="projectTitle" placeholder="Project Title">
+        <textarea id="projectDesc" placeholder="Project Description"></textarea>
+        <button onclick="addProject()">Add Project</button>
+    </div>
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+
+    <div class="certifications-box" id="certGrid">
+        <div class="cert-card">
+            <h3>JavaScript Certificate</h3>
+            <p>Certiport Certified JavaScript by Dr. Gary A. Gates</p>
+        </div>
+        <div class="cert-card">
+            <h3>Python Certificate</h3>
+            <p>Parul University Certified Python by Dr. Priya R. Swaminarayan</p>
+        </div>
+        <div class="cert-card">
+            <h3>Java Training</h3>
+            <p>Java Training for Spoken Tutorial Project at IIT Bombay</p>
+        </div>
+    </div>
+
+    <!-- Add new certificate -->
+    <div class="add-cert">
+        <input type="text" id="certName" placeholder="Certificate Name">
+        <input type="text" id="certDetails" placeholder="Details / Issuer">
+        <button onclick="addCertificate()">Add Certificate</button>
+    </div>
+</section>
+
+
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="contact-box">
+        <form onsubmit="return sendMessage()">
+            <div class="input-group">
+                <input type="text" id="name" required>
+                <label for="name">Your Name</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label for="email">Your Email</label>
+            </div>
+            <div class="input-group">
+                <textarea id="message" rows="5" required></textarea>
+                <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <div class="info">
+             <p>📱 Mobile: <a href="tel:+919523897967">+91 9523897967</a></p>
+            <p>📧 Email: <a href="mailto:kundankr2724@gmail.com">kundankr2724@gmail.com</a></p>
+            <p>🌐 GitHub: <a href="https://github.com/kundan0207kumar" target="_blank">github.com/kundan0207kumar</a></p>
+            <p>🔗 LinkedIn: <a href="https://linkedin.com/in/kundan-kumar-91a2b2258" target="_blank">linkedin.com/in/kundan-kumar-91a2b2258</a></p>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    © 2025 Kundan Kumar | MCA Student
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
